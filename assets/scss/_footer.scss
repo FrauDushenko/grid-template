@@ -1,0 +1,81 @@
+.footer
+{
+    padding: 50px 20px 70px 20px;
+
+    text-align: center;
+
+    background-color: $color-primary;
+
+
+    &__container
+    {
+        @extend %container;
+    }
+
+    &__social a:hover
+    {
+        color: $color-accent;
+    }
+
+    &__social
+    {
+        position: relative;
+
+        display: grid;
+
+        margin-bottom: $gap * 2;
+
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+
+        &::after
+        {
+            position: absolute;
+            bottom: -$gap;
+            left: calc(50% - 75px / 2);
+
+            width: 75px;
+            height: 2px;
+
+            content: '';
+
+            background-color: rgba($color-light, .1);
+        }
+
+        a
+        {
+            padding: 10px;
+
+            transition: color .5s;
+            letter-spacing: 0;
+
+            background-color: $color-primary;
+        }
+        .fab
+        {
+            font-size: 2.25rem;
+        }
+    }
+
+    &__copy
+    {
+        span:nth-of-type(1)
+        {
+            font-weight: 100;
+
+            margin-right: -4px;
+            margin-left: 4px;
+
+            letter-spacing: .33em;
+        }
+        span:nth-of-type(2)
+        {
+            font-weight: 700;
+
+            letter-spacing: .05em;
+
+            color: $color-light;
+        }
+    }
+}
+

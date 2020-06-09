@@ -1,0 +1,114 @@
+.form
+{
+    padding: 30px 0;
+
+    background-color: $color-primary;
+
+    .btn-accent
+    {
+        width: 100%;
+
+        color: $color-light;
+        border: 2px solid rgba($color-light, 0);
+        border-bottom: 2px solid rgba($color-light, .25);
+        background-color: rgba($color-light, .1);
+
+        @include lg-md
+        {
+            font-size: 1rem;
+        }
+        @include sm-min
+        {
+            min-width: 100%;
+        }
+
+        &:hover
+        {
+            border: 2px solid $color-light;
+            background-color: $color-accent;
+        }
+    }
+
+    &__container
+    {
+        display: grid;
+
+        gap: $gap;
+        @extend %container;
+        @include lg-min
+        {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 'a1 a2 a3';
+        }
+        @include lg-md
+        {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas: 'a1 a2 a3';
+        }
+        @include md-sm
+        {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'a1 a1' 'a2 a3';
+        }
+        @include sm
+        {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'a1' 'a2' 'a3';
+        }
+    }
+
+    &-item
+    {
+        &:nth-of-type(1)
+        {
+            @include md-sm
+            {
+                grid-column: 1 / span 2;
+            }
+        }
+        &__input
+        {
+            font-size: 1.125rem;
+
+            width: 100%;
+            height: 60px;
+            padding: 2px 30px;
+
+            transition: background-color .5s, border-color .5s;
+            letter-spacing: .15em;
+
+            color: rgba($color-light, .2);
+            border: 2px solid rgba($color-light, 0);
+            border-bottom: 2px solid rgba($color-light, .2);
+            //   color: rgba($color-light, 0.51);
+            background-color: rgba($color-light, .05);
+
+            @include lg-md
+            {
+                font-size: 1rem;
+            }
+            &[type='text'],
+            &[type='email']
+            {
+                color: $color-light;
+            }
+
+            &:hover::placeholder
+            {
+                color: $color-light;
+            }
+
+
+            &:hover,
+            &:focus
+            {
+                border: 2px solid rgba($color-light, .2);
+                border-bottom: 2px solid rgba($color-light, .7);
+                outline: none;
+                background-color: rgba($color-light, .15);
+            }
+        }
+    }
+}
+
+
