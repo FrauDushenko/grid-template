@@ -1,1 +1,1 @@
-# grid-template
+Первая контрольная работа по grid-template
