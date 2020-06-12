@@ -45,17 +45,17 @@
         gap: $gap;
         @include lg-min
         {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(4, 1fr);
             grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a6 a6';
         }
         @include lg-md
         {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             grid-template-areas: 'a1 a1 a2' 'a3 a4 a4' 'a5 a5 a6';
         }
         @include md-sm
         {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             grid-template-areas: 'a1 a2' 'a3 a4' 'a5 a6';
         }
         @include sm
@@ -73,17 +73,18 @@
 
         &:hover
         {
-            background-color: $color-gray-light;
-        }
-        &:hover
-        {
+            background-color: rgba($color-gray, .25);
+
             .post-item__link
             {
                 color: $color-primary;
             }
-            .post-item__image img
+            .post-item__image
             {
-                transform: scale(1.1);
+                img
+                {
+                    transform: scale(1.1);
+                }
             }
         }
         &:nth-of-type(1)
@@ -121,6 +122,21 @@
             text-align: center;
 
             align-content: center;
+
+            h3
+            {
+                font-family: $font-header;
+                font-size: 1.125rem;
+
+                letter-spacing: .05em;
+            }
+
+            p
+            {
+                margin: 16px 0 16px 0;
+
+                letter-spacing: 0;
+            }
         }
         &__image
         {
@@ -129,6 +145,7 @@
 
             justify-content: center;
             align-items: center;
+
 
             img
             {
@@ -152,28 +169,7 @@
 
             grid-template-rows: 300px 1fr;
         }
-
-        h3
-        {
-            font-family: $font-header;
-            font-size: 1.125rem;
-
-            letter-spacing: .05em;
-        }
-
-        p
-        {
-            font-size: 1rem;
-
-            margin: 16px 0 16px 0;
-
-            letter-spacing: 0;
-            // line-height: 1.15em;
-
-            &::after
-            {
-                position: relative;
-            }
-        }
     }
-}
+} 
+
+
