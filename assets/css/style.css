@@ -706,7 +706,7 @@ a {
 }
 
 .skills-item:hover .skills-item__overlay {
-  opacity: .95;
+  opacity: 0.95;
 }
 
 .skills-item:hover .skills-item__link {
@@ -756,11 +756,11 @@ a {
 }
 
 .skills-item__image {
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  -o-transition: transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   background-position: 50% 50%;
   background-size: cover;
   position: absolute;
@@ -772,10 +772,10 @@ a {
 
 .skills-item__overlay {
   z-index: 1;
-  -webkit-transition: opacity .5s;
-  -o-transition: opacity .5s;
-  transition: opacity .5s;
-  opacity: .8;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0.8;
   background-color: #2d3651;
   position: absolute;
   top: 0;
@@ -800,10 +800,10 @@ a {
   display: flex;
   height: 100%;
   padding: 20px;
-  -webkit-transition: color .5s;
-  -o-transition: color .5s;
-  transition: color .5s;
-  letter-spacing: .1em;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  letter-spacing: 0.1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -879,23 +879,23 @@ h2 {
 }
 
 .form-item__input {
-  display: block;
   font-size: 1.125rem;
   font-weight: 100;
+  display: block;
   width: 100%;
   height: 60px;
   padding: 2px 30px;
-  -webkit-transition: background-color 0.5s, border-color 0.5s;
-  -o-transition: background-color 0.5s, border-color 0.5s;
-  transition: background-color 0.5s, border-color 0.5s;
-  letter-spacing: 0.15em;
+  -webkit-transition: background-color .5s, border-color .5s;
+  -o-transition: background-color .5s, border-color .5s;
+  transition: background-color .5s, border-color .5s;
+  letter-spacing: .15em;
   color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(255, 255, 255, 0);
   border-bottom: 2px solid rgba(255, 255, 255, 0.25);
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-.form-item__input[type="text"], .form-item__input[type="email"] {
+.form-item__input[type='text'], .form-item__input[type='email'] {
   color: #fff;
 }
 
@@ -953,9 +953,9 @@ h2 {
 }
 
 .post-item {
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
+  -webkit-transition: background-color .5s;
+  -o-transition: background-color .5s;
+  transition: background-color .5s;
   background-color: rgba(229, 229, 229, 0.5);
 }
 
@@ -1000,9 +1000,9 @@ h2 {
 .post-item__title {
   display: grid;
   padding: 20px;
-  -webkit-transition: color 0.5s;
-  -o-transition: color 0.5s;
-  transition: color 0.5s;
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  transition: color .5s;
   text-align: center;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -1011,7 +1011,7 @@ h2 {
 .post-item__title h3 {
   font-family: "Roboto Slab", serif;
   font-size: 1.125rem;
-  letter-spacing: 0.05em;
+  letter-spacing: .05em;
 }
 
 .post-item__title p {
@@ -1035,11 +1035,11 @@ h2 {
 .post-item__image img {
   width: 100%;
   height: 100%;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1167,8 +1167,8 @@ h2 {
     min-width: 250px;
   }
   .skills__container {
-    grid-template-columns: repeat(4 1fr);
-    grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a5 a6' 'a7 a8 a9 a6';
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
     gap: 10px;
   }
   .about {
@@ -1188,7 +1188,7 @@ h2 {
   }
   .form__container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "a1 a2 a3";
+    grid-template-areas: 'a1 a2 a3';
   }
   .post {
     padding-top: 100px;
@@ -1199,7 +1199,7 @@ h2 {
   }
   .post-grid {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "a1 a1 a2 a3" "a4 a5 a6 a6";
+    grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a6 a6';
   }
 }
 
@@ -1232,8 +1232,8 @@ h2 {
     letter-spacing: .1em;
   }
   .skills__container {
-    grid-template-columns: repeat(3 1fr);
-    grid-template-areas: 'a1 a1 a2' 'a3 a4 a4' 'a5 a5 a6' 'a7 a8 a6' 'a7 a9 a9';
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
     gap: 10px;
   }
   .about {
@@ -1250,7 +1250,7 @@ h2 {
   }
   .form__container {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "a1 a2 a3";
+    grid-template-areas: 'a1 a2 a3';
   }
   .post {
     padding-top: 80px;
@@ -1261,7 +1261,7 @@ h2 {
   }
   .post-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6";
+    grid-template-areas: 'a1 a1 a2' 'a3 a4 a4' 'a5 a5 a6';
   }
 }
 
@@ -1316,8 +1316,8 @@ h2 {
 
 @media (max-width: 767.8px) and (min-width: 576px) {
   .skills__container {
-    grid-template-columns: repeat(2 1fr);
-    grid-template-areas: 'a1 a2' 'a3 a2' 'a4 a4' 'a5 a6' 'a5 a7' 'a8 a9';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
     gap: 10px;
   }
   .about__container {
@@ -1326,14 +1326,14 @@ h2 {
   }
   .form__container {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "a1 a1" "a2 a3";
+    grid-template-areas: 'a1 a1' 'a2 a3';
   }
   .form-item:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
   .post-grid {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "a1 a2" "a3 a4" "a5 a6";
+    grid-template-areas: 'a1 a2' 'a3 a4' 'a5 a6';
   }
 }
 
@@ -1358,7 +1358,7 @@ h2 {
   }
   .skills__container {
     grid-template-columns: repeat(1fr);
-    grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6' 'a7' 'a8' 'a9';
+    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     gap: 20px;
   }
   .about__container {
@@ -1370,10 +1370,10 @@ h2 {
   }
   .form__container {
     grid-template-columns: 1fr;
-    grid-template-areas: "a1" "a2" "a3";
+    grid-template-areas: 'a1' 'a2' 'a3';
   }
   .post-grid {
     grid-template-columns: 1fr;
-    grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6";
+    grid-template-areas: 'a1' 'a2' 'a3' 'a4' 'a5' 'a6';
   }
 }
