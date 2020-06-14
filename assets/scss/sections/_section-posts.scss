@@ -69,7 +69,7 @@
     {
         transition: background-color .5s;
 
-        background-color: rgba($color-gray-light, .6);
+        background-color: rgba($color-gray-light, .5);
 
         &:hover
         {
@@ -146,7 +146,6 @@
             justify-content: center;
             align-items: center;
 
-
             img
             {
                 width: 100%;
@@ -170,6 +169,4 @@
             grid-template-rows: 300px 1fr;
         }
     }
-} 
-
-
+}
